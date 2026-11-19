@@ -1,3 +1,4 @@
+import IconoFavoritoFuncional from '@/components/IconoFavoritoFuncional'
 import { Link } from 'expo-router'
 import { FlatList, Image, Text, View } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
@@ -25,6 +26,7 @@ const ProductsScreen = () => {
             <View className='ml-20 mt-3 flex-row items-center justify-between'>
               <Text className='font-bold'>{item.price}€</Text>
               <Link style={{ color: 'purple' }} href={`/products/${item.id}`}>Ver detalles</Link>
+              <IconoFavoritoFuncional />
             </View>
           </View>
         }

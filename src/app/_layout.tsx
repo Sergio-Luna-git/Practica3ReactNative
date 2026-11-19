@@ -1,10 +1,6 @@
-import { Slot } from "expo-router";
-import "./global.css";
+import { Slot } from 'expo-router'
+import './global.css'
 
-const AppScreen = () => {
-    return (
-        <Slot />
-    )
+export default function RootLayout() {
+    return <Slot />
 }
-
-export default AppScreen

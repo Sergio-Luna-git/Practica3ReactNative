@@ -1,12 +1,43 @@
-import { Slot } from 'expo-router'
-import { SafeAreaView } from 'react-native-safe-area-context'
+import { Stack } from "expo-router"
 
-const StackScreen = () => {
+const StackLayout = () => {
+
     return (
-        <SafeAreaView>
-            <Slot />
-        </SafeAreaView>
-    )
-}
+        <Stack screenOptions={{
 
-export default StackScreen
+        }}
+        >
+            <Stack.Screen
+                name="products/index"
+                options={{
+                    title: 'Productos',
+                    headerShown: true,
+                    headerStyle: { backgroundColor: 'pink' }
+
+                }}
+            />
+
+            <Stack.Screen
+                name="favoritos/index"
+                options={{
+                    title: 'Favoritos',
+                    headerShown: true,
+                    headerStyle: { backgroundColor: 'lightgreen' }
+                }} />
+
+
+
+
+
+
+
+
+        </Stack>
+
+    )
+
+
+
+
+}
+export default StackLayout

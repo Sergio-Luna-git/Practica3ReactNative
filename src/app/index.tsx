@@ -1,7 +1,7 @@
 import { Redirect } from 'expo-router'
 
 const App = () => {
-    return <Redirect href={'/products'} />
+    return <Redirect href="/(drawer)/(tabs)/(stack)" />
 
 }
 export default App
