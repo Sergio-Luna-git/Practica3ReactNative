@@ -1,3 +1,5 @@
+export const cuboMario = require('../../assets/images/cuboMario.jpeg')
+
 export const products = [
     {
         id: '1',
