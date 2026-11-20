@@ -14,7 +14,7 @@ const ProductsScreen = () => {
         keyExtractor={(item) => item.id}
         ListEmptyComponent={<Text>No hay productos</Text>}
         renderItem={({ item }) =>
-          <View>
+          <View className='border-b mt-1 md-1'>
             <View className='flex-row items-center mt-2'>
               <Image className='h-16 w-16 object-cover rounded-xl' resizeMode='cover'
                 source={cuboMario} />
@@ -25,8 +25,11 @@ const ProductsScreen = () => {
             </View>
             <View className='ml-20 mt-3 flex-row items-center justify-between'>
               <Text className='font-bold'>{item.price}€</Text>
-              <Link style={{ color: 'purple' }} href={`/products/${item.id}`}>Ver detalles</Link>
-              <IconoFavoritoFuncional />
+              <Link
+                className=''
+                style={{ color: 'purple' }}
+                href={`/products/${item.id}`}>Ver detalles</Link>
+              <IconoFavoritoFuncional product={item} />
             </View>
           </View>
         }

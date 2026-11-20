@@ -1,22 +1,24 @@
+import { Products } from "@/store/products.store";
 import { Ionicons } from "@expo/vector-icons";
 import { Pressable } from "react-native";
-import useFavoritos from "../../hooks/setFavorito";
+import useFavorites from "../../hooks/setFavorito";
 
-const IconoFavoritoFuncional = () => {
+interface Props {
+    product: Products
+}
 
-    const { isFavorito, seleccionarFavorito } = useFavoritos();
+const IconoFavoritoFuncional = ({ product }: Props) => {
+
+    const { isFavorite, selectFavorite } = useFavorites(product);
 
     return (
-
-
-
         <Pressable
-            onPress={seleccionarFavorito}>
+            onPress={selectFavorite}>
             <Ionicons
                 size={20}
                 className='mr-20'
-                name={isFavorito ? 'heart' : 'heart-outline'}
-                color={isFavorito ? 'pink' : 'black'}
+                name={isFavorite ? 'heart' : 'heart-outline'}
+                color={isFavorite ? 'pink' : 'black'}
             />
         </Pressable>
     )

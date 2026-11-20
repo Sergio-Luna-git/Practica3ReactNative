@@ -1,17 +1,16 @@
+import { Products } from "@/store/products.store";
 import { useState } from "react";
 
-const useFavoritos = () => {
-    const [isFavorito, setisFavorito] = useState(false);
 
-    const seleccionarFavorito = () => {
-        if (!isFavorito) {
-            setisFavorito(true)
-        } else {
-            setisFavorito(false)
-        }
+const useFavorites = (product: Products) => {
+    const [isFavorite, setisFavorite] = useState(false);
+
+    const selectFavorite = () => {
+        setisFavorite(!product.isFavorite)
+        product.isFavorite = isFavorite
     }
 
-    return { seleccionarFavorito, isFavorito }
+    return { selectFavorite, isFavorite }
 }
 
-export default useFavoritos
+export default useFavorites

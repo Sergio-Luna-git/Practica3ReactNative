@@ -1,6 +1,17 @@
 export const cuboMario = require('../../assets/images/cuboMario.jpeg')
 
-export const products = [
+//hago una interfaz para pasar las propiedades y poder modificarlas
+export interface Products {
+    id: string,
+    title: string,
+    description: string,
+    price: number,
+    image: string,
+    addedToCart: number,
+    isFavorite: boolean
+}
+
+export const products: Products[] = [
     {
         id: '1',
         title: 'Auriculares Inalámbricos',
@@ -8,7 +19,8 @@ export const products = [
             'Experimenta una calidad de sonido premium con estos auriculares inalámbricos. Diseñados para la comodidad y el uso prolongado, son perfectos para amantes de la música y profesionales por igual.',
         price: 99.99,
         image: '',
-        addedToCart: 0
+        addedToCart: 0,
+        isFavorite: false
     },
     {
         id: '2',
@@ -17,7 +29,8 @@ export const products = [
             'Mantente conectado y sigue tu estado físico con este elegante y moderno reloj inteligente. Equipado con funciones como monitoreo de frecuencia cardíaca, GPS y más.',
         price: 149.99,
         image: '',
-        addedToCart: 0
+        addedToCart: 0,
+        isFavorite: false
     },
     {
         id: '3',
@@ -26,7 +39,8 @@ export const products = [
             'Portátil y potente, este altavoz Bluetooth ofrece un sonido claro y nítido donde quiera que vayas. Ideal para fiestas, actividades al aire libre y más.',
         price: 59.99,
         image: '',
-        addedToCart: 0
+        addedToCart: 0,
+        isFavorite: false
     },
     {
         id: '4',
@@ -35,7 +49,8 @@ export const products = [
             'Mejora tu experiencia de juego con este ratón para gaming de alta precisión. Diseñado ergonómicamente y construido para durar, es imprescindible para cualquier jugador.',
         price: 39.99,
         image: '',
-        addedToCart: 0
+        addedToCart: 0,
+        isFavorite: false
     },
     {
         id: '5',
@@ -44,6 +59,7 @@ export const products = [
             'Disfruta de impresionantes visuales con este monitor 4K. Perfecto para juegos, trabajo o entretenimiento, ofrece colores vibrantes y detalles nítidos.',
         price: 299.99,
         image: '',
-        addedToCart: 0
+        addedToCart: 0,
+        isFavorite: false
     },
 ];
